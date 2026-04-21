@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Navbar (shared across pages) ── */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 11, 20, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 28px;
+  margin-left: 36px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #a78bfa;
+}
+
+.navbar-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.nav-icon-btn:hover {
+  border-color: rgba(167, 139, 250, 0.35);
+  color: #fff;
+  background: rgba(167, 139, 250, 0.08);
+}
+
+.nav-user-wrap {
+  position: relative;
+  margin-left: 4px;
+}
+
+.nav-user-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px 4px 4px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.nav-user-trigger:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+  background: rgba(167, 139, 250, 0.1);
+}
+
+.nav-user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+}
+
+.nav-user-avatar--photo {
+  display: block;
+  object-fit: cover;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.nav-user-chevron {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-right: 4px;
+}
+
+.nav-user-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 180px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(18, 16, 28, 0.98);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  z-index: 200;
+}
+
+.nav-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.nav-dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-dropdown-item i {
+  font-size: 16px;
+  opacity: 0.75;
+}
+
+.nav-dropdown-logout {
+  color: #fca5a5;
+}
+
+.nav-dropdown-logout:hover {
+  background: rgba(248, 113, 113, 0.12);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.btn-primary {
+  background: #6c3ff5;
+  border: none;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: #7c52f7;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 14px 20px;
+  }
+  .navbar-links {
+    display: none;
+  }
+}

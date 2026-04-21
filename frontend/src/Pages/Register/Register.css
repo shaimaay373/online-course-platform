@@ -1,0 +1,163 @@
+/* Register.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap');
+
+/* ── Page ── */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #0f0f1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── خلفية متحركة ── */
+.page::before,
+.page::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.12;
+  pointer-events: none;
+  animation: float 8s ease-in-out infinite;
+}
+.page::before {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #6c3ff5, transparent);
+  top: -150px; left: -150px;
+}
+.page::after {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, #00d4ff, transparent);
+  bottom: -100px; right: -100px;
+  animation-delay: -4s;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-30px) scale(1.05); }
+}
+
+/* ── Navbar ── */
+.navbar-custom {
+  background: transparent;
+  animation: slideDown .6s ease both;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Card ── */
+.card-custom {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px !important;
+  animation: fadeUp .7s ease .2s both;
+  transition: box-shadow .3s ease, border-color .3s ease;
+}
+.card-custom:hover {
+  box-shadow: 0 24px 60px rgba(108, 63, 245, 0.18);
+  border-color: rgba(108, 63, 245, 0.3);
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Inputs ── */
+.input-custom {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 10px !important;
+  transition: border-color .25s, box-shadow .25s, background .25s;
+}
+.input-custom::placeholder { color: rgba(255,255,255,0.35); }
+.input-custom:focus {
+  background: rgba(108, 63, 245, 0.1) !important;
+  border-color: rgba(108, 63, 245, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(108, 63, 245, 0.15) !important;
+  color: #fff !important;
+  outline: none;
+}
+
+/* ── Role Toggle ── */
+.role-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  padding: 8px 0;
+  font-size: 14px;
+  transition: color .2s, background .2s;
+  border-radius: 6px;
+}
+.role-btn:hover { color: rgba(255,255,255,0.7); }
+.role-btn.active {
+  background: rgba(108, 63, 245, 0.6);
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(108, 63, 245, 0.35);
+}
+
+/* ── Submit Button ── */
+.btn-primary {
+  background: linear-gradient(135deg, #6c3ff5, #4f46e5) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em;
+  transition: transform .2s, box-shadow .2s, opacity .2s !important;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+  opacity: 0;
+  transition: opacity .2s;
+}
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(108, 63, 245, 0.45) !important;
+}
+.btn-primary:hover::after { opacity: 1; }
+.btn-primary:active:not(:disabled) { transform: translateY(0); }
+.btn-primary:disabled { opacity: 0.6 !important; cursor: not-allowed; }
+
+/* ── Form fields stagger ── */
+.mb-3 {
+  animation: fadeUp .5s ease both;
+}
+.mb-3:nth-child(1) { animation-delay: .3s; }
+.mb-3:nth-child(2) { animation-delay: .4s; }
+.mb-3:nth-child(3) { animation-delay: .5s; }
+.mb-3:nth-child(4) { animation-delay: .6s; }
+
+/* ── Error ── */
+.error-text {
+  color: #ff6b6b;
+  font-size: 13px;
+  animation: shake .4s ease;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-8px); }
+  40%       { transform: translateX(8px); }
+  60%       { transform: translateX(-5px); }
+  80%       { transform: translateX(5px); }
+}
+
+/* ── Links ── */
+.link-custom {
+  color: #00d4ff;
+  text-decoration: none;
+  transition: color .2s, text-shadow .2s;
+}
+.link-custom:hover {
+  color: #6c3ff5;
+  text-shadow: 0 0 12px rgba(108, 63, 245, 0.5);
+}

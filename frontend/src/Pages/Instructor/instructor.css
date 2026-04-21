@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+.inst-shell {
+  display: flex;
+  min-height: 100vh;
+  background: #12121b;
+  color: #e5e7eb;
+  font-family: 'DM Sans', sans-serif;
+  text-align: left;
+}
+
+.inst-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.inst-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(18, 18, 27, 0.92);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.inst-header h1 {
+  margin: 0;
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.inst-header-sub {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.inst-header-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inst-avatar-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 14px;
+}
+
+.inst-avatar-sm img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.inst-content {
+  padding: 24px 28px 48px;
+  flex: 1;
+}
+
+.inst-grid-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.inst-stat-card {
+  background: linear-gradient(145deg, #1c1c28, #16161f);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.inst-stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 8px;
+}
+
+.inst-stat-value {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.inst-stat-meta {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #86efac;
+}
+
+.inst-panel {
+  background: linear-gradient(145deg, #1c1c28, #16161f);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.inst-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.inst-panel-title {
+  margin: 0;
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  color: #fff;
+}
+
+.inst-toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.inst-input,
+.inst-select,
+.inst-textarea {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.inst-input:focus,
+.inst-select:focus,
+.inst-textarea:focus {
+  outline: none;
+  border-color: rgba(167, 139, 250, 0.5);
+}
+
+.inst-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.inst-btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.inst-btn-secondary {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.inst-table-wrap {
+  overflow-x: auto;
+}
+
+.inst-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.inst-table th,
+.inst-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.inst-table th {
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.inst-thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.inst-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.inst-badge--pub {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.35);
+}
+
+.inst-badge--draft {
+  background: rgba(234, 179, 8, 0.12);
+  color: #fcd34d;
+  border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+.inst-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.inst-link {
+  color: #a78bfa;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.inst-link:hover {
+  text-decoration: underline;
+}
+
+.inst-skeleton {
+  height: 14px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.06) 25%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.06) 75%
+  );
+  background-size: 200% 100%;
+  animation: inst-shimmer 1.2s infinite;
+}
+
+@keyframes inst-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.inst-toast-host {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inst-toast {
+  min-width: 260px;
+  max-width: 420px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inst-toast--ok {
+  background: #14532d;
+  color: #dcfce7;
+}
+
+.inst-toast--err {
+  background: #7f1d1d;
+  color: #fecaca;
+}
+
+.inst-error-banner {
+  background: rgba(127, 29, 29, 0.35);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  color: #fecaca;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.inst-form-grid {
+  display: grid;
+  gap: 16px;
+  max-width: 640px;
+}
+
+.inst-field label {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 6px;
+}
+
+.inst-field .inst-input,
+.inst-field .inst-select,
+.inst-field .inst-textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inst-preview-img {
+  max-width: 200px;
+  max-height: 120px;
+  border-radius: 10px;
+  margin-top: 8px;
+  object-fit: cover;
+}
