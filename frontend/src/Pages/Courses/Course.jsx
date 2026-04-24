@@ -143,7 +143,7 @@ function CourseCard({ course }) {
   const reviewCount    = course.reviewCount || '1.2k';
   const courseId       = course._id || course.id;
 
-  // ✅ الحل — بيتعامل مع object أو string
+
   const instructorName =
     typeof course.instructor === 'object'
       ? course.instructor?.name || 'Lead Instructor'
